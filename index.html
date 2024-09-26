@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Algorithm Adventure</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="game-container">
+        <h1>Algorithm Adventure</h1>
+        <div id="game-description">
+            <p>Welcome to the Algorithm Adventure! Solve puzzles based on computational thinking concepts like loops, conditionals, and sorting to progress through the levels.</p>
+            <button id="start-game">Start Game</button>
+        </div>
+
+        <!-- Level 1: Loops -->
+        <div class="level" id="level-1" style="display: none;">
+            <h2>Level 1: Loops</h2>
+            <p>Help the character complete the loop. Move through the blocks by repeating actions.</p>
+            <div id="loop-game">
+            <p>Click the button <span id="remaining-clicks">5</span> times!</p>
+                <button id="loop-button">Click Me!</button>
+                </div>
+            <button id="next-level-1" style="display: none;">Next Level</button>
+        </div>
+
+
+        <!-- Level 2: Conditionals -->
+<!-- Level 2: Conditionals with Sub-Levels -->
+<div class="level" id="level-2" style="display: none;">
+    <h2>Level 2: Conditionals</h2>
+    <p id="conditional-instructions">Follow the instructions below for pattern recognition.</p>
+    
+    <!-- Sub-Level 1: Easy -->
+    <div id="sub-level-1">
+        <p>If the shape is red, click it; otherwise, choose the square.</p>
+        <div id="shape-grid">
+            <div class="shape circle" id="red-circle" data-color="red"></div>
+            <div class="shape square" id="blue-square" data-color="blue"></div>
+            <div class="shape circle" id="green-circle" data-color="green"></div>
+            <div class="shape square" id="yellow-square" data-color="yellow"></div>
+        </div>
+    </div>
+
+    <!-- Sub-Level 2: Medium Difficulty -->
+    <div id="sub-level-2" style="display: none;">
+        <p>If the shape is blue or a square, click it; otherwise, choose the red circle.</p>
+        <div id="shape-grid-2">
+            <div class="shape circle" id="red-circle-2" data-color="red"></div>
+            <div class="shape square" id="blue-square-2" data-color="blue"></div>
+            <div class="shape circle" id="green-circle-2" data-color="green"></div>
+            <div class="shape square" id="yellow-square-2" data-color="yellow"></div>
+        </div>
+    </div>
+
+    <!-- Sub-Level 3: Hard Difficulty -->
+    <div id="sub-level-3" style="display: none;">
+        <p>If the shape is red and a square, click it; otherwise, choose the blue circle.</p>
+        <div id="shape-grid-3">
+            <div class="shape circle" id="red-circle-3" data-color="red"></div>
+            <div class="shape square" id="red-square-3" data-color="red"></div>
+            <div class="shape circle" id="blue-circle-3" data-color="blue"></div>
+            <div class="shape square" id="blue-square-3" data-color="blue"></div>
+        </div>
+    </div>
+
+    <p id="feedback-2"></p>
+    <button id="next-sub-level" style="display: none;">Next Sub-Level</button>
+    <button id="next-level-2" style="display: none;">Next Level (Sorting)</button>
+</div>
+
+<!-- Level 3: Sorting Algorithms -->
+<div class="level" id="level-3" style="display: none;">
+    <h2>Level 3: Sorting Algorithms</h2>
+    <p>Select a sorting algorithm and visualize how it works!</p>
+    
+    <div>
+        <button id="generate-array">Generate Array</button>
+        <select id="algorithm-select">
+            <option value="" disabled selected>Select Sorting Algorithm</option>
+            <option value="bubbleSort">Bubble Sort</option>
+            <option value="selectionSort">Selection Sort</option>
+            <option value="insertionSort">Insertion Sort</option>
+            <option value="quickSort">Quick Sort</option>
+            <option value="mergeSort">Merge Sort</option>
+        </select>
+        <button id="start-sorting">Start Sorting</button>
+    </div>
+
+    <div class="canvas-container">
+        <h3>Original Array</h3>
+        <canvas id="original-array" width="500" height="200"></canvas>
+        
+        <h3>Sorting Process</h3>
+        <canvas id="sorting-process" width="500" height="200"></canvas>
+        
+        <h3>Final Sorted Array</h3>
+        <canvas id="final-array" width="500" height="200"></canvas>
+    </div>
+
+    <div id="algorithm-description" style="margin-top: 20px;">
+        <h2>Algorithm Description</h2>
+        <p id="description-text">Select an algorithm to see its description here.</p>
+    </div>
+    
+    <button id="finish-btn">Finish</button>
+    <button id="try-another-sort-btn">Try another algorithm</button>
+</div>
+
+
+</div>
+
+
+        <!-- Game Over -->
+        <div class="game-over" id="game-over" style="display: none;">
+            <h2>Congratulations! You’ve completed the Algorithm Adventure!</h2>
+            <p>Your time: <span id="player-time"></span> seconds.</p>
+            <button id="submit-score">Submit Score</button>
+        </div>
+
+        <!-- Leaderboard -->
+        <div class="leaderboard" id="leaderboard" style="display: none;">
+            <h2>Leaderboard</h2>
+            <ul id="leaderboard-list"></ul>
+            <button id="restart-game">Restart Game</button>
+        </div>
+    </div>
+
+    <script src="game.js"></script>
+    <script src="your-sorting-algorithms.js"></script>
+
+</body>
+</html>

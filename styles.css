@@ -1,0 +1,189 @@
+/* General Styling */
+body {
+    font-family: Arial, sans-serif;
+    background-color: #F3FF90; /* Light Yellow */
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    color: #132043; /* Dark Blue */
+}
+
+h1 {
+    color: #211C6A; /* Dark Blue */
+    font-size: 2.5rem;
+}
+
+h2 {
+    color: #059212; /* Green */
+    font-size: 2rem;
+}
+
+button {
+    padding: 10px 20px;
+    font-size: 1rem;
+    background-color: #06D001; /* Bright Green */
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    margin-top: 10px;
+    transition: background-color 0.3s; /* Smooth transition */
+}
+
+button:hover {
+    background-color: #059212; /* Darker Green */
+}
+
+/* Game Container */
+.game-container {
+    text-align: center;
+    max-width: 800px;
+    margin: auto;
+    padding: 20px;
+    background-color: #9BEC00; /* Bright Yellow */
+    border-radius: 10px;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+/* Progress Bar */
+#progress {
+    background-color: #eee;
+    border-radius: 5px;
+    overflow: hidden;
+    height: 20px;
+    margin: 20px 0;
+}
+
+#progress-bar {
+    background-color: #06D001; /* Bright Green */
+    height: 100%;
+    width: 0%; /* Default width */
+    transition: width 0.3s; /* Smooth transition */
+}
+
+/* Game Over Screen */
+.game-over {
+    margin-top: 20px;
+}
+
+/* Leaderboard Styling */
+.leaderboard {
+    margin-top: 20px;
+}
+
+.leaderboard ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+.leaderboard li {
+    background-color: #FFF455; /* Soft Yellow */
+    padding: 10px;
+    margin: 5px 0;
+    border: 1px solid #211C6A; /* Dark Blue */
+    border-radius: 5px;
+    font-size: 1.2rem;
+    font-weight: bold;
+}
+
+/* Styling for the Conditional Game (Level 2) */
+#shape-grid {
+    display: flex;
+    justify-content: space-around;
+    margin: 20px 0;
+}
+
+.shape {
+    width: 100px;
+    height: 100px;
+    cursor: pointer;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: 2px solid #132043;
+}
+
+.circle {
+    border-radius: 50%;
+}
+
+.square {
+    border-radius: 10%;
+}
+
+#red-circle {
+    background-color: red;
+}
+
+#blue-square {
+    background-color: blue;
+}
+
+#green-circle {
+    background-color: green;
+}
+
+#yellow-square {
+    background-color: yellow;
+}
+
+/* Feedback and instructions */
+#feedback {
+    font-size: 1.2rem;
+    color: #059212; /* Green feedback color */
+    margin-top: 10px;
+}
+
+.canvas-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin-top: 20px;
+}
+
+canvas {
+    border: 1px solid #000;
+    margin-bottom: 20px;
+}
+
+button, select {
+    margin: 10px;
+    padding: 10px;
+    font-size: 16px;
+    background-color: #4CCD99; /* Your chosen palette */
+    color: white;
+    border: none;
+    border-radius: 5px;
+}
+
+button:hover, select:hover {
+    background-color: #159054; /* Change color on hover */
+}
+
+h3 {
+    color: #211C6A; /* Your chosen heading color */
+}
+
+.level h2 {
+    color: #132043;
+}
+
+canvas {
+    border: 1px solid #ccc;
+    margin-bottom: 10px;
+}
+
+button {
+    margin: 5px;
+}
+
+#algorithm-description {
+    border-radius: 5px;
+    font-size: 14px;
+    line-height: 1.5;
+    padding: 10px;
+}
